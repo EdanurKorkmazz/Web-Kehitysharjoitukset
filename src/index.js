@@ -35,15 +35,15 @@ app.get('/api/sum/:num1/:num2', (req, res) => {
     return;
   }
 
-  app.use((req, res) => {
-    res.status(404).send('404')
-  });
-
   res.json({
     num1,
     num2,
     sum: num1 + num2
   });
+});
+
+app.use((req, res) => {
+  res.status(404).send('404')
 });
 
 // syötteen lukeminen kyselyparametreista (query params)
