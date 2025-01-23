@@ -1,7 +1,21 @@
-### palvelimen juuri
+# ekat testit
 
-GET http://127.0.0.1:3000/
+### Palvelimen juuri
+GET http://localhost:3000
 
-###
+### morotesti
+GET http://localhost:3000/moro
 
-GET http://127.0.0.1:3000/moro
+### morotesti POST
+POST http://localhost:3000/api/moro
+content-type: application/json
+
+{
+  "sender": "kalle",
+  "message": "testitervehdys"
+}
+
+## items
+
+### get all items
+GET http://localhost:3000/api/items
